@@ -1,0 +1,57 @@
+#include <stdio.h>
+void add(float x,float y);
+void sub(float x,float y);
+void multiply(float x,float y);
+void divide(float x, float y);
+int main()
+{
+    float input1,input2;
+    char ch;
+    printf("Enter The First Operand");
+    scanf("%f", &input1);
+    printf("Enter the Second Operand");
+    scanf("%f",&input2);
+    printf("Enter The operator");
+    scanf(" %c", &ch);
+    if(ch=='+')
+    {
+    add(input1,input2);
+    }
+    else if(ch=='-')
+    {
+    sub(input1,input2);
+    }
+    else if(ch=='*')
+    {
+    multiply(input1,input2);
+    }
+    else if(ch=='/')
+    {
+    divide(input1,input2);
+    }
+}
+void add(float x,float y)
+{
+    float sum;
+    sum=x+y;
+    printf("Sum of the two numbers is %f", sum);
+}
+void sub(float x,float y)
+{
+    float diff;
+    diff=x-y;
+    printf("Difference between the two numbers is %f", diff);
+    
+}
+void multiply(float x,float y)
+{
+    float result;
+    result=x*y;
+    printf("The result after multiplication is %f", result);
+}
+void divide(float x,float y)
+{
+    float result;
+    result=x/y;
+    printf("The result after multiplication is %f", result);
+}
