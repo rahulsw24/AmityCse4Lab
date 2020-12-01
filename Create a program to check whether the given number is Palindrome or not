@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+int reverse(int a);
+int main()
+{
+    int x,original,rev;
+    printf("Enter a number to check: \n");
+    scanf("%d",&x);
+    original=x;
+    rev=reverse(x);
+    if(original==rev)
+    {
+        printf("It is a Palindrome");
+        
+    }
+    else
+    printf("Not a Palindrome");
+    return 0;
+}
+int reverse(int a)
+{
+int rem,result;
+    while (a != 0) {
+        rem = a % 10;
+        result = result * 10 + rem;
+        a /= 10;
+    }
+    return result;
+}
